@@ -3,11 +3,13 @@ console.clear();
 const PORT = 3200;
 
 const express = require('express');
+const cors = require('cors');
 const FavoriteService = require('./favoriteService');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const favService = new FavoriteService();
 
